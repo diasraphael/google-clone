@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Google Clone
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## This project uses the below packages
 
-## Available Scripts
+### react-router
 
-In the project directory, you can run:
+to move from search page to search results page
 
-### `npm start`
+### material UI
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+to use builtin components, images
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### google custom api
 
-### `npm test`
+for user search
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### custom hook with react
 
-### `npm run build`
+### tailwind for styling
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Home page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Search results page
 
-### `npm run eject`
+## Notes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### To create the create react app in typescript
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npx create-react-app google-clone --template typescript
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### tailwind setup
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+step1: Install Tailwind CSS
+Install tailwindcss and its peer dependencies via npm, and then run the init command to generate both tailwind.config.js and postcss.config.js.
 
-## Learn More
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+step2: Configure your template paths
+Add the paths to all of your template files in your tailwind.config.js file.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+module.exports = {
+content: [
+"./src/**/*.{js,jsx,ts,tsx}",
+],
+theme: {
+extend: {},
+},
+plugins: [],
+}
+
+step3: Add the Tailwind directives to your CSS
+Add the @tailwind directives for each of Tailwind’s layers to your ./src/index.css file.
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+step4: Start your build process
+Run your build process with npm run start.
+
+Start using Tailwind in your project
+Start using Tailwind’s utility classes to style your content.
+
+### material ui installation
+
+npm install @mui/material
+
+npm install @mui/icons-material
+
+### react router 6 installation
+
+npm install react-router-dom@6
