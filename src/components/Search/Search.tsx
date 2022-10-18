@@ -4,15 +4,18 @@ import MicIcon from "@mui/icons-material/Mic";
 import { Button } from "@mui/material";
 import "./Search.css";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const Search = (props: any) => {
   const [input, setInput] = useState("");
   const { hideButtons } = props;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const handleSearch = (event: any) => {
     event.preventDefault(); // preventing the refresh
-    console.log("abc", input);
-    navigate("/search");
+    console.log("The input", input);
+    dispatch({ type: "SEARCH", payload: input });
+    navigate("/searchResults");
   };
   return (
     <form>

@@ -1,9 +1,10 @@
-import React from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
+import { InitialState } from "../../store";
 
 const SearchResults = () => {
-  return (
-    <div>SearchResults</div>
-  )
-}
+  const searchTerm = useSelector((state: InitialState) => state.searchTerm);
+  return <div>{searchTerm}</div>;
+};
 
-export default SearchResults
+export default SearchResults;

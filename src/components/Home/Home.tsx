@@ -50,7 +50,7 @@ const Home = () => {
           alt="google logo"
         />
         <div>
-          <Search hideButtons></Search>
+          <Search></Search>
         </div>
       </div>
     </div>
