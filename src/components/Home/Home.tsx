@@ -49,7 +49,7 @@ const Home = () => {
           src="./assets/googlelogo.png"
           alt="google logo"
         />
-        <div>
+        <div className="m-auto mt-[40px] max-w-xl w-9/12">
           <Search></Search>
         </div>
       </div>

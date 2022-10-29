@@ -18,6 +18,8 @@ for user search
 
 ### tailwind for styling
 
+fetch for backend call
+
 ## features
 
 Home page
@@ -41,3 +43,23 @@ npm install @emotion/styled @emotion/react
 ### react router 6 installation
 
 npm install react-router-dom@6
+
+### How to add google search to web application
+
+#### Step1: Get API key
+
+https://developers.google.com/custom-search/v1/using_rest
+
+click Get a key button
+
+create a new project using the option and give a name
+
+copy the API key and store it in a file(key.ts)
+
+#### Step2: create new search engine
+
+open http://cse.google.com/cse/create/new
+
+give name to search engine
+
+click search the entire web option and create

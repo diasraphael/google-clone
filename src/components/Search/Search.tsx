@@ -19,7 +19,7 @@ const Search = (props: any) => {
   };
   return (
     <form>
-      <div className="flex items-center border-[lightgray] border-[1px] mt-[40px] rounded-full h-10 max-w-xl w-9/12 m-auto">
+      <div className="flex items-center border-[lightgray] border-[1px] rounded-full h-10">
         <span className="pl-3 text-[gray]">
           <SearchIcon></SearchIcon>
         </span>
@@ -34,7 +34,9 @@ const Search = (props: any) => {
           <MicIcon></MicIcon>
         </span>
       </div>
-      {!hideButtons && (
+      {hideButtons ? (
+        <></>
+      ) : (
         <div className="mt-[30px] flex justify-center">
           <span className="buttonStyle m-[5px] rounded bg-[#f8f8f8] border-[white] border-[1px] text-[#5f6368] hover:shadow-[0 1px 1px rgba(0,0,0,.1)] hover:bg-[#f8f8f8]">
             <Button type="submit" onClick={handleSearch}>
