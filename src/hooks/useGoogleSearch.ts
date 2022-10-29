@@ -15,7 +15,7 @@ const useGoogleSearch = (searchTerm: any) => {
           setData(result);
         });
     };
-    
+
     fetchData();
   }, [searchTerm]);
 

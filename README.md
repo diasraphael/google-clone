@@ -26,6 +26,9 @@ Home page
 
 Search results page
 
+TODO:
+brief about the home page and search page
+
 ## Notes
 
 ### To create the create react app in typescript
@@ -63,3 +66,5 @@ open http://cse.google.com/cse/create/new
 give name to search engine
 
 click search the entire web option and create
+
+copy the search engine id to pass when we call the api

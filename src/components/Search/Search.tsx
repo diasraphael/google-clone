@@ -7,13 +7,12 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 const Search = (props: any) => {
-  const [input, setInput] = useState("");
-  const { hideButtons } = props;
+  const { hideButtons, searchTerm } = props;
+  const [input, setInput] = useState(searchTerm || "");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleSearch = (event: any) => {
     event.preventDefault(); // preventing the refresh
-    console.log("The input", input);
     dispatch({ type: "SEARCH", payload: input });
     navigate("/searchResults");
   };
