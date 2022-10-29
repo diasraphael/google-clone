@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import useGoogleSearch from "../../hooks/useGoogleSearch";
-import response from "../../response/response";
+//import response from "../../response/response";
 import { InitialState } from "../../store";
 import Search from "../Search/Search";
 import SearchIcon from "@mui/icons-material/Search";
